@@ -1,0 +1,22 @@
+// ----------------------------------------------------------------
+// * Valiables
+// ---------------------------------------------------------------
+$break: 768;
+$side: 20;
+$baseFontSize: 14;
+$max:960;
+//普通
+$font01: 'Noto Sans JP', sans-serif;
+$font02: 'Heebo', sans-serif;
+$font03: 'Heebo', sans-serif;
+$baseColor: #212121;
+$z-map: (header, menu);
+
+// z-indexの管理
+@function z($name) {
+  @return index($z-map, $name)+20;
+}
+
+@function prop($numerator, $entire, $unit: '%') {
+  @return $numerator/$entire*100+$unit;
+}

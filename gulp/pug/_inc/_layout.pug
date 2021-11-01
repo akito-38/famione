@@ -1,0 +1,40 @@
+doctype html
+block vars
+  - var page = ''
+html(lang="ja")
+  head
+
+    meta(charset="UTF-8")
+    meta(name="format-detection",content="telephone=no")
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width viewport-fit=cover')
+    block holder
+    block meta1
+      meta(name='keywords', content='')
+      meta(name='description', content='')
+    block title
+      title
+    block meta2
+    block styles
+      link(rel="stylesheet", href="/css/style.css")
+      //- link(rel="stylesheet", href="/css/slick.css")
+      //- link(rel='preconnect' href='https://fonts.googleapis.com')
+      //- link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+      //- link(href='https://fonts.googleapis.com/css2?family=Heebo:wght@400;700&display=swap' rel='stylesheet')
+      //- link(href='https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap' rel='stylesheet')
+      //- link(rel='icon' href='/images/favicon.ico')
+
+    block styles_only
+    block scripts
+    block scripts2
+  body
+    block header
+      header.bl_mainHeader
+
+    block main
+    block footer
+      footer.bl_mainFooter
+
+
+    block scripts_footer
+    block scripts_only

@@ -1,0 +1,16 @@
+.DS_Store
+.vagrant
+Gemfile
+Gemfile.lock
+Rakefile
+Vagrantfile.sample
+Vagrantfile.theme-review
+provision/packaging.sh
+spec
+
+*.log
+.sass-cache/
+node_modules/
+src/
+themes/
+
