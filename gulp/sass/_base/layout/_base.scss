@@ -10,18 +10,9 @@ html {
 body {
   word-wrap: break-word;
 
-  @include res_max($break) {
-    @include fs(12);
-  }
+
 }
 
-.bl_contentMargin {
-  padding-top: 115px;
-
-  @include res_max($break) {
-    padding-top: 64px;
-  }
-}
 
 a {
   color: inherit;
@@ -86,11 +77,8 @@ th {
 }
 
 a[href*='tel:'] {
-  cursor: default;
-  pointer-events: none;
-
-  @include res_max($break) {
-    cursor: pointer;
-    pointer-events: auto;
+  @include res_min($break) {
+    pointer-events: none;
+    cursor: default;
   }
 }

@@ -1,21 +1,21 @@
 // ----------------------------------------------------------------
 // * Utilities
 // ----------------------------------------------------------------
-.h-hide {
-  display: none !important;
-}
+// .h-hide {
+//   display: none !important;
+// }
 
-.h-hide-pc {
-  display: none !important;
-}
+// .h-hide-pc {
+//   display: none !important;
+// }
 
 
-@include res_max($break) {
-  .h-hide-pc {
-    display: block !important;
-  }
+// @include res_max($break) {
+//   .h-hide-pc {
+//     display: block !important;
+//   }
 
-  .h-hide-sp {
-    display: none !important;
-  }
-}
+//   .h-hide-sp {
+//     display: none !important;
+//   }
+// }
