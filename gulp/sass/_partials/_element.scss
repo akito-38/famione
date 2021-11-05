@@ -1,64 +1,81 @@
 // --------------------------------------
 // エレメント
 // --------------------------------------
-.el_lv2Heading{
-  @include fs(16);
-  font-weight: bold;
-  text-align: center;
-  padding-bottom: 15px;
-  border-bottom: 1px solid #D4CECA;
+.el_lv2Heading {
   margin-bottom: 24px;
-}
-.el_input{
-  background-color: #fff;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #d4ceca;
+  text-align: center;
+  font-weight: bold;
+
   @include fs(16);
-  border-radius: 4px;
-  border: 1px solid #D4CECA;
-  width: 100%;
-  padding:9px;
-  font-weight: normal;
 }
-.el_require{
-  &::after{
-    width: 36px;
+
+.el_input {
+  padding: 9px;
+  width: 100%;
+  border: 1px solid #d4ceca;
+  border-radius: 4px;
+  background-color: #fff;
+  font-weight: normal;
+
+  @include fs(16);
+}
+
+.el_require {
+  &::after {
     display: inline-block;
-    text-align: center;
-    content:'必須';
-    line-height: 17px;
-    @include fs(10);
     margin-left: 5px;
-    color: #E01E5A;
-    border: 1px solid #E01E5A;
+    width: 36px;
+    border: 1px solid #e01e5a;
+    color: #e01e5a;
+    content: '必須';
+    text-align: center;
+    line-height: 17px;
+
+    @include fs(10);
   }
 }
+
 ::placeholder {
   color: #ccc;
 }
 
-.en_btn{
-  @include fs(13);
-  border-radius: 4px;
-  background-color: #F28B34;
-  color: #fff;
-  min-width:280px ;
+.en_btn {
+  min-width: 280px;
   min-height: 42px;
+  border-radius: 4px;
+  background-color: #f28b34;
+  color: #fff;
+
+  @include fs(13);
 }
+
 .el_textCenterLink {
   display: block;
   margin-top: 22px;
   text-align: center;
-  @include fs(12);
   letter-spacing: 1.2px;
+
+  @include fs(12);
+
   @include res_min($break) {
     @include fs(14);
   }
 }
-.el_error{
-  color: #E01E5A;
-  @include fs(12);
+
+.el_error {
   margin-top: 4px;
+  color: #e01e5a;
+
+  @include fs(12);
 }
-.el_txt01{
+
+.el_txt01 {
   @include fs(14);
-  margin-bottom: 20px;
+
+  em {
+    color: #f28b34;
+    font-style: normal;
+  }
 }

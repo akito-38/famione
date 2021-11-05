@@ -1,0 +1,15 @@
+extends ../_inc/_layout
+block vars
+  - var page = 'noHeader'
+
+block title
+  title
+
+block main
+  .bl_pageCenterboxWrapper
+    .bl_pageCenterbox
+      .bl_pageCenterbox_logo
+        img(src="/images/logo.svg", alt="famione", width="180", height="32", loading="lazy")
+      .bl_pageCenterboxInner
+        h2.el_lv2Heading パスワード再設定用のメールを送信完了
+        p.el_txt01 メールからパスワードを再設定することができます。もしメールが届かない場合は、メールアドレスが間違っているか、<em>@camp-fire.jp</em>からのメール受信を許可していない可能性があります。
