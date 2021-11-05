@@ -1,3 +1,102 @@
 // --------------------------------------
-// レイアウト
+// ブロック
 // --------------------------------------
+.bl_mainHeader {
+  margin-bottom: 20px;
+  padding: 17px 16px;
+  border-bottom: 1px solid #d4ceca;
+  background-color: #fff;
+
+  &__pcHide {
+    @include res_min($break) {
+      display: none;
+    }
+  }
+}
+
+.bl_mainHeader_logo {
+  display: block;
+}
+
+.bl_pageCenterboxWrapper {
+  @include res_min($break) {
+    min-height: 600px;
+    height: 100vh;
+
+    @include frc();
+  }
+}
+
+.bl_pageCenterbox {
+  margin: 0 #{$side}px;
+
+  @include res_min($break) {
+    margin: 0;
+    width: 400px;
+    //  position: fixed;
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);;
+  }
+}
+
+.bl_pageCenterboxInner {
+  @include res_min($break) {
+    padding: 30px 40px 30px;
+    border-radius: 6px;
+    background-color: #fff;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, .12);
+  }
+}
+
+.bl_formList {
+  font-weight: bold;
+
+  @include fs(14);
+
+  div {
+    margin-bottom: 24px;
+
+    @include res_min($break) {
+      margin-bottom: 20px;
+    }
+  }
+
+  dt {
+    margin-bottom: 8px;
+
+    a {
+      float: right;
+      font-weight: normal;
+
+      @include fs(12);
+    }
+  }
+}
+
+.bl_saveLabel {
+  display: block;
+  text-align: center;
+
+  @include fs(14);
+
+  input {
+    margin-right: 8px;
+    vertical-align: middle;
+  }
+}
+
+.bl_btnWrapper {
+  margin-top: 22px;
+  text-align: center;
+}
+
+.bl_pageCenterbox_logo {
+  display: none;
+
+  @include res_min($break) {
+    display: block;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+}

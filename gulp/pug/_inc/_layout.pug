@@ -18,10 +18,10 @@ html(lang="ja")
     block styles
       link(rel="stylesheet", href="/css/style.css")
       //- link(rel="stylesheet", href="/css/slick.css")
-      //- link(rel='preconnect' href='https://fonts.googleapis.com')
-      //- link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+      link(rel='preconnect' href='https://fonts.googleapis.com')
+      link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
       //- link(href='https://fonts.googleapis.com/css2?family=Heebo:wght@400;700&display=swap' rel='stylesheet')
-      //- link(href='https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap' rel='stylesheet')
+      link(href='https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap' rel='stylesheet')
       //- link(rel='icon' href='/images/favicon.ico')
 
     block styles_only
@@ -29,7 +29,16 @@ html(lang="ja")
     block scripts2
   body
     block header
-      header.bl_mainHeader
+      -if(page=='noHeader')
+        header.bl_mainHeader.bl_mainHeader__pcHide
+          h1
+            a(href="#")
+              img(src="/images/logo.svg", alt="famione", width="124", height="22", loading="lazy").bl_mainHeader_logo
+      -else
+        header.bl_mainHeader
+          h1
+            a(href="#")
+              img(src="/images/logo.svg", alt="famione", width="124", height="22", loading="lazy").bl_mainHeader_logo
 
     block main
     block footer

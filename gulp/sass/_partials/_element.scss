@@ -1,3 +1,60 @@
 // --------------------------------------
 // エレメント
 // --------------------------------------
+.el_lv2Heading{
+  @include fs(16);
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #D4CECA;
+  margin-bottom: 24px;
+}
+.el_input{
+  background-color: #fff;
+  @include fs(16);
+  border-radius: 4px;
+  border: 1px solid #D4CECA;
+  width: 100%;
+  padding:9px;
+  font-weight: normal;
+}
+.el_require{
+  &::after{
+    width: 36px;
+    display: inline-block;
+    text-align: center;
+    content:'必須';
+    line-height: 17px;
+    @include fs(10);
+    margin-left: 5px;
+    color: #E01E5A;
+    border: 1px solid #E01E5A;
+  }
+}
+::placeholder {
+  color: #ccc;
+}
+
+.en_btn{
+  @include fs(13);
+  border-radius: 4px;
+  background-color: #F28B34;
+  color: #fff;
+  min-width:280px ;
+  min-height: 42px;
+}
+.el_textCenterLink {
+  display: block;
+  margin-top: 22px;
+  text-align: center;
+  @include fs(12);
+  letter-spacing: 1.2px;
+  @include res_min($break) {
+    @include fs(14);
+  }
+}
+.el_error{
+  color: #E01E5A;
+  @include fs(12);
+  margin-top: 4px;
+}
