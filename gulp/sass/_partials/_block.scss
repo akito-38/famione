@@ -138,3 +138,131 @@
   display: block;
   margin-bottom: 5px;
 }
+
+// --------------------------------------
+// popup
+// --------------------------------------
+.bl_popUp {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 297px;
+  border-radius: 6px;
+  background-color: #fff;
+  transform: translate(-50%, -50%);
+  z-index: z(popup);
+  @include res_min($break) {
+    width: 480px;
+  }
+}
+
+.bl_close {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+
+  @include res_min($break) {
+    top: 20px;
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #d4ceca;
+    content: '';
+  }
+
+  &::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  &::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+}
+
+.bl_popUp_header {
+  padding: 13px 24px;
+  border-bottom: 1px solid #d4ceca;
+  font-weight: bold;
+  @include fs(16);
+
+  @include res_min($break) {
+    @include fs(20);
+  }
+}
+
+.bl_popUp_body {
+  overflow: auto;
+  padding: 16px;
+  height: 345px;
+  line-height: 2;
+
+  @include res_min($break) {
+    padding: 24px;
+    max-height: calc(100vh - 65px);
+    height: 550px;
+    @include fs(14);
+  }
+
+  @include fs(12);
+
+  p {
+    margin-bottom: 20px;
+  }
+}
+
+.bl_popUp_dl {
+  >div {
+    margin: 20px 0;
+    counter-increment: term;
+  }
+
+  dt {
+    margin-bottom: 20px;
+
+    &::before {
+      content: '第'counter(term)'条 ';
+    }
+  }
+}
+
+.bl_dotList {
+  li {
+    margin-bottom: 20px;
+    counter-increment: termList;
+
+    &::before {
+      content: counter(termList)'.';
+    }
+  }
+}
+
+.bl_bracketsList {
+  li {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    counter-increment: termbracketsList;
+
+    &::before {
+      content: '('counter(termbracketsList)')';
+    }
+  }
+}
+.bl_glayLayer{
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  z-index: z(grayback);
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0,0.8);
+}

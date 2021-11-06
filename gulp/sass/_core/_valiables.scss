@@ -11,7 +11,7 @@ sans-serif;
 // $font02: 'Heebo', sans-serif;
 // $font03: 'Heebo', sans-serif;
 $baseColor: #454545;
-$z-map: (header, menu);
+$z-map: (header, grayback,popup);
 
 // z-indexの管理
 @function z($name) {
