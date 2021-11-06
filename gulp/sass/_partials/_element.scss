@@ -94,3 +94,25 @@
     @include fs(14);
   }
 }
+
+.el_radio {
+  display: none;
+
+  &+span {
+    display: inline-block;
+    margin-top: -2px;
+    margin-right: 8px;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #d4ceca;
+    border-radius: 50%;
+    background-color: #fff;
+    vertical-align: middle;
+  }
+
+  &:checked {
+    &+span {
+      border: 5.5px solid #f28b34;
+    }
+  }
+}

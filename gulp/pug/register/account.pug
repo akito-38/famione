@@ -1,0 +1,65 @@
+extends ../_inc/_layout
+block vars
+  - var page = 'noHeader'
+
+block title
+  title
+
+block main
+  .bl_pageCenterboxWrapper
+    .bl_pageCenterbox
+      .bl_pageCenterbox_logo
+        img(src="/images/logo.svg", alt="famione", width="180", height="32", loading="lazy")
+      .bl_pageCenterboxInner
+        h2.el_lv2Heading アカウント情報の登録
+        form(action="")
+          dl.bl_formList
+            div
+              dt.el_require 名前（ニックネームも可）
+              dd
+                small.bl_formList_small 登録後も変更が可能です。
+                input(type="text",placeholder="名前（ニックネーム）").el_input
+            div
+              dt.el_require
+                |パスワード
+              dd
+                input(type="password",placeholder="半角英数字6文字以上").el_input
+
+            div
+              dt.el_require
+                |パスワード（確認）
+              dd
+                input(type="password",placeholder="パスワード").el_input
+
+            div
+              dt.el_require
+                |性別
+              dd
+                small.bl_formList_small どちらでもないを選んだ方には女性のチェックシートが届きます
+
+                label.bl_labelVertical
+                  input(type="radio" name="gender").el_radio
+                  span
+                  |女性
+
+                label.bl_labelVertical
+                  input(type="radio" name="gender").el_radio
+                  span
+                  |男性
+
+                label.bl_labelVertical
+                  input(type="radio" name="gender").el_radio
+                  span
+                  |どちらでもない
+            div
+              dt.el_require
+                |利用規約とプライバシーポリシー
+              dd.bl_formList_check
+                input(type="checkbox")
+                |<a href="#">利用規約</a>と<a href="#">プライバシーポリシー</a>に同意する
+
+          //- label.bl_saveLabel
+          //-   input(type="checkbox")
+          //-   |ログイン状態を保存する
+          .bl_btnWrapper
+            input(type="submit" value="登録").en_btn

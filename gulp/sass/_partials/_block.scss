@@ -20,7 +20,7 @@
 
 .bl_pageCenterboxWrapper {
   @include res_min($break) {
-    min-height: 600px;
+    min-height: 780px;
     height: 100vh;
 
     @include frc();
@@ -33,10 +33,6 @@
   @include res_min($break) {
     margin: 0;
     width: 400px;
-    //  position: fixed;
-    // top: 50%;
-    // left: 50%;
-    // transform: translate(-50%, -50%);;
   }
 }
 
@@ -51,8 +47,25 @@
 
 .bl_formList {
   margin-top: 20px;
-  font-weight: bold;
+
   @include fs(14);
+
+  &_check {
+    @include fs(12);
+
+    @include res_min($break) {
+      @include fs(14);
+    }
+
+    a {
+      color: #3b7de9;
+    }
+
+    input {
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+  }
 
   div {
     margin-bottom: 24px;
@@ -64,6 +77,7 @@
 
   dt {
     margin-bottom: 8px;
+    font-weight: bold;
 
     a {
       float: right;
@@ -100,14 +114,27 @@
     text-align: center;
   }
 }
+
 // --------------------------------------
 // 登録画面
 // --------------------------------------
-.bl_headingIcon{
+.bl_headingIcon {
+  color: #f28b34;
   text-align: center;
-  color: #F28B34;
-  span{
+
+  span {
     font-size: 60px;
   }
+}
 
+.bl_formList_small {
+  display: block;
+  margin-top: -5px;
+  margin-bottom: 8px;
+  font-weight: normal;
+}
+
+.bl_labelVertical {
+  display: block;
+  margin-bottom: 5px;
 }
