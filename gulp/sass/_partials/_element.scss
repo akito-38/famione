@@ -95,6 +95,18 @@
   }
 }
 
+.el_txtBold{
+  font-weight: bold;
+  @include fs(14);
+  margin-bottom:16px ;
+  em {
+    color: #f28b34;
+    font-style: normal;
+  }
+  @include res_min($break) {
+    @include fs(16);
+  }
+}
 .el_radio {
   display: none;
 

@@ -1,0 +1,23 @@
+extends ../_inc/_layout
+block vars
+  - var page = 'noHeader'
+
+block title
+  title
+
+block main
+  .bl_pageCenterboxWrapper
+    .bl_pageCenterbox
+      .bl_pageCenterbox_logo
+        img(src="/images/logo.svg", alt="famione", width="180", height="32", loading="lazy")
+      .bl_pageCenterboxInner
+
+        .bl_headingIcon
+          span.material-icons-outlined
+            | check_circle
+        h2.el_lv2Heading 新規登録が完了しました
+        p.el_txtBold famioneにご登録いただき誠にありがとうございます。引き続き、<em>チェックシートのご提出</em>をお願いします。
+        p.el_txt02 チェックシートは、ファミワンにご入力いただいた情報は匿名化された状態でアドバイザー(専門家)に渡り、分析・アドバイスをおこないます。<br>ご用意でき次第、各アドバイザーからのアドバイスをそれぞれお届けいたします。<br>1~3通お届けする予定です。
+
+        .bl_btnWrapper
+          input(type="submit" value="チェックシートを入力").en_btn
