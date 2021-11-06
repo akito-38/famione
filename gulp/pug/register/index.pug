@@ -1,0 +1,25 @@
+extends ../_inc/_layout
+block vars
+  - var page = 'noHeader'
+
+block title
+  title
+
+block main
+  .bl_pageCenterboxWrapper
+    .bl_pageCenterbox
+      .bl_pageCenterbox_logo
+        img(src="/images/logo.svg", alt="famione", width="180", height="32", loading="lazy")
+      .bl_pageCenterboxInner
+        h2.el_lv2Heading 新規ユーザー登録
+        form(action="")
+          dl.bl_formList
+            div
+              dt.el_require メールアドレス
+              dd
+                input(type="email",placeholder="メールアドレス").el_input
+
+          .bl_btnWrapper
+            input(type="submit" value="確認メールを送信").en_btn
+
+          a(href="#").el_textCenterLink ログインはこちら

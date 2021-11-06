@@ -49,6 +49,9 @@
   color: #fff;
 
   @include fs(13);
+  @include res_min($break) {
+    width: 100%;
+  }
 }
 
 .el_textCenterLink {
