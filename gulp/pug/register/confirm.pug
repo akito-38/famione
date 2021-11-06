@@ -1,0 +1,19 @@
+extends ../_inc/_layout
+block vars
+  - var page = 'noHeader'
+
+block title
+  title
+
+block main
+  .bl_pageCenterboxWrapper
+    .bl_pageCenterbox
+      .bl_pageCenterbox_logo
+        img(src="/images/logo.svg", alt="famione", width="180", height="32", loading="lazy")
+      .bl_pageCenterboxInner
+
+        .bl_headingIcon
+          span.material-icons-outlined
+            | email
+        h2.el_lv2Heading メールをご確認ください
+        p.el_txt02 メールに記載されたURLをクリックの上、新規会員登録を続けてください。<br>もしメールが届かない場合は、メールアドレスが間違っているか、<em>@camp-fire.jp</em>からのメール受信を許可していない可能性があります。

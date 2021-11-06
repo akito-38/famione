@@ -49,6 +49,7 @@
   color: #fff;
 
   @include fs(13);
+
   @include res_min($break) {
     width: 100%;
   }
@@ -74,11 +75,22 @@
   @include fs(12);
 }
 
-.el_txt01 {
-  @include fs(14);
-
+.el_txt01,
+.el_txt02 {
   em {
     color: #f28b34;
     font-style: normal;
+  }
+}
+
+.el_txt01 {
+  @include fs(14);
+}
+
+.el_txt02 {
+  @include fs(12);
+
+  @include res_min($break) {
+    @include fs(14);
   }
 }
